@@ -1,0 +1,516 @@
+/* --- GENERAL --- */
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  background: #f6f7fb;
+  color: #393d46;
+  overflow-x: hidden; }
+
+a {
+  text-decoration: none;
+  color: #393d46; }
+
+header {
+  position: static;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; }
+  @media (max-width: 768px) {
+    header {
+      width: 100%;
+      height: 120px;
+      align-items: center; } }
+  header ul {
+    list-style: none;
+    width: 100%;
+    margin-top: 100px; }
+    @media (max-width: 576px) {
+      header ul {
+        margin-top: 15px; } }
+    @media (max-width: 768px) {
+      header ul {
+        margin-top: 15px; } }
+    header ul li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
+      width: 100%;
+      height: 100%;
+      font-size: large;
+      transition: 500ms; }
+      header ul li:hover {
+        border-right: 15px solid;
+        border-color: #393d46; }
+        @media (max-width: 576px) {
+          header ul li:hover {
+            border: none; } }
+      @media (max-width: 576px) {
+        header ul li {
+          width: 100vw;
+          height: 150px;
+          display: flex;
+          flex-wrap: wrap;
+          width: 10px;
+          height: 10px;
+          font-size: 16px;
+          margin-left: 25px;
+          margin-right: 25px; } }
+      @media (max-width: 768px) {
+        header ul li {
+          width: 100vw;
+          height: 150px;
+          display: flex;
+          flex-wrap: wrap;
+          width: 10px;
+          height: 10px;
+          font-size: 16px;
+          margin-left: 25px;
+          margin-right: 25px; } }
+    header ul #playStation--li li:hover {
+      border-right: 15px solid;
+      border-color: #0000ff; }
+    header ul #xbox--li li:hover {
+      border-right: 15px solid;
+      border-color: #9bc848; }
+    header ul #nintendo--li li:hover {
+      border-right: 15px solid;
+      border-color: #fe0016; }
+  header p {
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 24px; }
+    @media (max-width: 768px) {
+      header p {
+        margin-top: 15px; } }
+
+@media (max-width: 768px) {
+  .nav_no_mobile {
+    display: none; } }
+
+.nav_mobile {
+  display: none; }
+  @media (max-width: 768px) {
+    .nav_mobile {
+      display: flex;
+      justify-content: space-evenly; } }
+  .nav_mobile img {
+    width: 30px; }
+
+.box {
+  width: 300px;
+  height: 300px;
+  background-color: #f6f7fb;
+  padding: 15px;
+  padding-top: 0;
+  margin: 10px;
+  text-align: center;
+  display: grid;
+  grid-template-areas: "imagen" "subTitulo" "p-info";
+  grid-template-rows: 150px 30px auto; }
+  .box--img {
+    grid-area: imagen;
+    width: 100%;
+    height: 100%; }
+  .box--subTitulo {
+    grid-area: subTitulo; }
+  .box--allPadding {
+    padding: 15px; }
+
+.box__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.box--info {
+  width: 300px;
+  height: 300px;
+  background-color: #f6f7fb;
+  padding: 15px;
+  padding-top: 0;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.btn {
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  background: none;
+  border: 2px solid #393d46;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 16px; }
+  .btn:hover {
+    background-color: #393d46;
+    color: white; }
+
+/* --- GENERAL --- */
+/* --- INDEX --- */
+.index__main {
+  display: grid;
+  grid-template-areas: "header home";
+  grid-template-columns: 150px 1fr;
+  width: 100vw;
+  height: 100vh;
+  width: 100vw;
+  height: 100vh; }
+  @media (max-width: 768px) {
+    .index__main {
+      grid-template-areas: "header" "home";
+      grid-template-columns: 100vw;
+      grid-template-rows: 120px auto; } }
+
+.index__main--header {
+  grid-area: header; }
+
+.index__main--home {
+  grid-area: home;
+  background-color: white;
+  margin-top: 100px;
+  margin-right: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center; }
+  @media (max-width: 768px) {
+    .index__main--home {
+      margin: 0; } }
+  @media (max-width: 576px) {
+    .index__main--home {
+      grid-template-columns: 100vw;
+      grid-template-rows: repeat(3, 300px); } }
+  .index__main--home img {
+    width: 100%; }
+    @media (max-width: 576px) {
+      .index__main--home img {
+        width: 80%;
+        height: 300px;
+        margin: 0; } }
+  .index__main--home a {
+    width: 100%;
+    height: 100%; }
+    .index__main--home a div {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      align-items: center;
+      transition: 500ms; }
+      @media (max-width: 576px) {
+        .index__main--home a div {
+          justify-content: center; } }
+
+.index__main--playStation:hover {
+  border-bottom: 30px solid #0000ff; }
+  @media (max-width: 576px) {
+    .index__main--playStation:hover {
+      border: none; } }
+
+.index__main--xbox:hover {
+  border-bottom: 30px solid #9bc848; }
+  @media (max-width: 576px) {
+    .index__main--xbox:hover {
+      border: none; } }
+
+.index__main--nintendo:hover {
+  border-bottom: 30px solid #fe0016; }
+  @media (max-width: 576px) {
+    .index__main--nintendo:hover {
+      border: none; } }
+
+/* --- INDEX --- */
+/* --- NINTENDO --- */
+.nintendo__main {
+  display: grid;
+  grid-template-areas: "header info";
+  grid-template-columns: 150px 1fr;
+  width: 100vw;
+  height: 100vh; }
+  @media (max-width: 768px) {
+    .nintendo__main {
+      grid-template-areas: "header" "info";
+      grid-template-columns: 100vw;
+      grid-template-rows: 120px auto; } }
+
+.nintendo__info {
+  grid-area: info;
+  background-color: white;
+  margin-top: 100px;
+  margin-right: 150px;
+  display: grid;
+  grid-template-areas: "titulo titulo img" "info info img" "info info btn";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px auto auto;
+  align-items: center;
+  justify-content: center; }
+  @media (max-width: 768px) {
+    .nintendo__info {
+      grid-template-areas: "titulo" "img" "info" "btn";
+      grid-template-columns: 100vw;
+      grid-template-rows: 100px 200px auto auto;
+      margin: 0;
+      justify-items: center;
+      text-align: center; } }
+  .nintendo__info--img {
+    width: 100%;
+    margin: 25px;
+    grid-area: img; }
+    @media (max-width: 768px) {
+      .nintendo__info--img {
+        width: 50%;
+        margin: 0; } }
+    @media (max-width: 576px) {
+      .nintendo__info--img {
+        width: auto;
+        height: 100%;
+        margin: 0; } }
+  .nintendo__info--titulo {
+    grid-area: titulo;
+    font-size: 36px;
+    margin-left: 25px; }
+    @media (max-width: 576px) {
+      .nintendo__info--titulo {
+        margin: 0; } }
+  .nintendo__info--div {
+    grid-area: info;
+    margin: 25px; }
+  .nintendo__info--btn {
+    grid-area: btn;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+/* --- NINTENDO --- */
+/* --- XBOX --- */
+.xbox__main {
+  display: grid;
+  grid-template-areas: "header infoXbox";
+  grid-template-columns: 150px 1fr;
+  width: 100vw;
+  height: 100vh; }
+  @media (max-width: 768px) {
+    .xbox__main {
+      grid-template-areas: "header" "infoXbox";
+      grid-template-columns: 100vw;
+      grid-template-rows: 120px auto; } }
+
+.xbox__info {
+  grid-area: infoXbox;
+  background-color: white;
+  margin-top: 100px;
+  margin-right: 150px;
+  display: grid;
+  grid-template-areas: "tituloX tituloX imgX" "infoX infoX imgX" "infoX infoX btnX";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px auto auto;
+  align-items: center;
+  justify-content: center; }
+  @media (max-width: 768px) {
+    .xbox__info {
+      grid-template-areas: "tituloX" "imgX" "infoX" "btnX";
+      grid-template-columns: 100vw;
+      grid-template-rows: 100px 200px auto auto;
+      margin: 0;
+      justify-items: center;
+      text-align: center; } }
+  .xbox__info--img {
+    width: 115%;
+    margin: 25px;
+    grid-area: imgX; }
+    @media (max-width: 768px) {
+      .xbox__info--img {
+        width: 40%;
+        margin: 0; } }
+    @media (max-width: 576px) {
+      .xbox__info--img {
+        width: auto;
+        height: 100%; } }
+  .xbox__info--titulo {
+    grid-area: tituloX;
+    font-size: 36px;
+    margin-left: 25px; }
+  .xbox__info--div {
+    grid-area: infoX;
+    margin: 25px; }
+  .xbox__info--btn {
+    grid-area: btnX;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+/* --- XBOX --- */
+/* --- PLAYSTATION --- */
+.playStation__main {
+  display: grid;
+  grid-template-areas: "header infoPlay";
+  grid-template-columns: 150px 1fr;
+  width: 100vw;
+  height: 100vh; }
+  @media (max-width: 768px) {
+    .playStation__main {
+      grid-template-areas: "header" "infoPlay";
+      grid-template-columns: 100vw;
+      grid-template-rows: 120px auto; } }
+
+.playStation__info {
+  grid-area: infoPlay;
+  background-color: white;
+  margin-top: 100px;
+  margin-right: 150px;
+  display: grid;
+  grid-template-areas: "tituloP tituloP imgP" "infoP infoP imgP" "infoP infoP btnP";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px auto auto;
+  align-items: center;
+  justify-content: center; }
+  @media (max-width: 768px) {
+    .playStation__info {
+      grid-template-areas: "tituloP" "imgP" "infoP" "btnP";
+      grid-template-columns: 100vw;
+      grid-template-rows: 100px 200px auto auto;
+      margin: 0;
+      justify-items: center;
+      text-align: center; } }
+  .playStation__info--img {
+    width: 100%;
+    margin: 25px;
+    margin-left: 100px;
+    grid-area: imgP; }
+    @media (max-width: 768px) {
+      .playStation__info--img {
+        width: 30%;
+        margin: 0; } }
+    @media (max-width: 576px) {
+      .playStation__info--img {
+        width: auto;
+        height: 100%;
+        margin-left: 0; } }
+  .playStation__info--titulo {
+    grid-area: tituloP;
+    font-size: 36px;
+    margin-left: 25px; }
+  .playStation__info--div {
+    grid-area: infoP;
+    margin: 25px; }
+  .playStation__info--btn {
+    grid-area: btnP;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+/* --- PLAYSTATION --- */
+/* --- CONSULTA --- */
+.consulta__main {
+  display: grid;
+  grid-template-areas: "header consulta";
+  grid-template-columns: 150px 1fr;
+  width: 100vw;
+  height: 100vh; }
+  @media (max-width: 768px) {
+    .consulta__main {
+      grid-template-areas: "header" "consulta";
+      grid-template-columns: 100vw;
+      grid-template-rows: 120px auto; } }
+
+.consulta__area {
+  grid-area: consulta;
+  background-color: white;
+  margin-top: 100px;
+  margin-right: 150px;
+  padding: 25px;
+  display: grid;
+  grid-template-areas: "tituloConsulta tituloConsulta" "form imgConsulta";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 1fr; }
+  @media (max-width: 768px) {
+    .consulta__area {
+      grid-template-areas: "tituloConsulta" "imgConsulta" "form";
+      grid-template-columns: 100vw;
+      grid-template-rows: 100px auto auto;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      justify-items: center;
+      text-align: center; } }
+  .consulta__area h1 {
+    font-size: 36px;
+    grid-area: tituloConsulta;
+    padding: 25px; }
+    @media (max-width: 576px) {
+      .consulta__area h1 {
+        padding: 0; } }
+  .consulta__area .formulario {
+    grid-area: form;
+    width: 90%; }
+    .consulta__area .formulario form {
+      display: flex;
+      flex-direction: column; }
+      .consulta__area .formulario form input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px;
+        margin-left: 0;
+        box-sizing: border-box;
+        outline: none;
+        transition: 500ms; }
+        .consulta__area .formulario form input:focus {
+          border: 3px solid #555; }
+      .consulta__area .formulario form select {
+        width: 100%;
+        padding: 16px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+        margin: 8px;
+        margin-left: 0; }
+      .consulta__area .formulario form textarea {
+        margin: 8px;
+        margin-left: 0;
+        width: 100%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        resize: none;
+        outline: none;
+        transition: 500ms; }
+        .consulta__area .formulario form textarea:focus {
+          border: 3px solid #555; }
+      .consulta__area .formulario form input[type=submit] {
+        text-align: center;
+        width: 100%;
+        background: none;
+        border: 2px solid #393d46;
+        cursor: pointer;
+        margin: 10px;
+        margin-left: 0;
+        font-size: 16px; }
+        .consulta__area .formulario form input[type=submit]:hover {
+          background-color: #393d46;
+          color: white; }
+  .consulta__area img {
+    grid-area: imgConsulta;
+    width: 100%; }
+    @media (max-width: 768px) {
+      .consulta__area img {
+        width: 50%; } }
+    @media (max-width: 576px) {
+      .consulta__area img {
+        width: 100%; } }
+
+/* --- CONSULTA --- */

@@ -1,0 +1,73 @@
+@import "../variables";
+@import "../functions";
+/* --- XBOX --- */
+.xbox__main{
+    display: grid;
+    grid-template-areas: "header infoXbox";
+    grid-template-columns: 150px 1fr;
+    @include sizes(100vw, 100vh);
+    @include media-query(md){
+        grid-template-areas: "header"
+                            "infoXbox";
+        grid-template-columns: 100vw;
+        grid-template-rows: 120px auto;
+    }
+}
+
+.xbox__info{
+    grid-area: infoXbox;
+    background-color: white;
+    margin-top: 100px;
+    margin-right: 150px;
+    display: grid;
+    grid-template-areas: 
+    "tituloX tituloX imgX"
+    "infoX infoX imgX"
+    "infoX infoX btnX"
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px auto auto;
+    align-items: center;
+    justify-content: center;
+    @include media-query(md){
+        grid-template-areas: "tituloX"
+                            "imgX"
+                            "infoX"
+                            "btnX";
+        grid-template-columns: 100vw;
+        grid-template-rows: 100px 200px auto auto;
+        margin: 0;
+        justify-items: center;
+        text-align: center;
+    }
+    &--img{
+        width: 115%;
+        margin: 25px;
+        grid-area: imgX;
+        @include media-query(md){
+            width: 40%;
+            margin: 0;
+        }
+        @include media-query(sm){
+            @include sizes(auto, 100%);           
+        }
+    }
+    &--titulo{
+        grid-area: tituloX;
+        font-size: 36px;
+        margin-left: 25px;
+    }
+    &--div{
+        grid-area: infoX;
+        margin: 25px;
+    }
+    &--btn{
+        grid-area: btnX;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}
+/* --- XBOX --- */

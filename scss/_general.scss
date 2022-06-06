@@ -1,0 +1,177 @@
+@import "variables";
+@import "functions";
+/* --- GENERAL --- */
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background: $color_background;
+    color: $color_fonts;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: $color_fonts;
+}
+
+header{
+    position: static;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    @include media-query(md){
+        @include sizes(100%, 120px);
+        align-items: center;
+    }
+    
+    ul{
+        list-style: none;
+        width: 100%;
+        margin-top: 100px;
+        @include media-query(sm){
+            margin-top: 15px;
+        }
+        @include media-query(md){
+            margin-top: 15px;
+        }
+        li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 0;
+            @include sizes(100%, 100%);
+            font-size: large;
+            transition: 500ms;
+            
+            &:hover{
+                border-right: 15px solid;
+                border-color: $color_secundario;
+                @include media-query(sm){
+                    border: none
+                }
+            }
+            @include media-query(sm){
+                @include sizes(100vw, 150px);
+                display: flex;
+                flex-wrap: wrap;
+                @include sizes(10px, 10px);
+                font-size: 16px;
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+            @include media-query(md){
+                @include sizes(100vw, 150px);
+                display: flex;
+                flex-wrap: wrap;
+                @include sizes(10px, 10px);
+                font-size: 16px;
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+        }
+        #playStation--li{
+            & li:hover{
+                border-right: 15px solid;
+                border-color: $color_playStation;
+            }
+        }
+        #xbox--li{
+            & li:hover{
+                border-right: 15px solid;
+                border-color: $color_xbox;
+            }
+        }
+        #nintendo--li{
+            & li:hover{
+                border-right: 15px solid;
+                border-color: $color_nintendo;
+            }
+        }
+    }
+    p{
+        margin-top: 50px;
+        font-weight: bold;
+        font-size: 24px;
+        @include media-query(md){
+            margin-top: 15px;
+        }
+    }
+    
+}
+.nav_no_mobile{
+    @include media-query(md){
+        display: none;
+    }
+    
+}
+.nav_mobile{
+    display: none;
+    @include media-query(md){
+        display: flex;
+        justify-content: space-evenly;
+    }
+    img{
+        width: 30px;
+    }
+}
+.box{
+    @include sizes(300px, 300px);
+    background-color: $color_background;
+    padding: 15px;
+    padding-top: 0;
+    margin: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-areas: "imagen"
+                        "subTitulo"
+                        "p-info"
+    ;
+    grid-template-rows: 150px 30px auto;
+    &--img{
+        grid-area: imagen;
+        @include sizes(100%, 100%);
+    }
+    &--subTitulo{
+        grid-area: subTitulo;
+    }
+    &--allPadding{
+        padding: 15px;
+    }
+}
+.box__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box--info{
+    @include sizes(300px, 300px);
+    background-color: $color_background;
+    padding: 15px;
+    padding-top: 0;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    text-align: center;
+    @include sizes(200px, 50px);
+    background: none;
+    border: 2px solid $color_secundario;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+    &:hover{
+        background-color: $color_secundario;
+        color: white;
+    }
+}
+/* --- GENERAL --- */

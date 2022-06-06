@@ -1,0 +1,74 @@
+@import "../variables";
+@import "../functions";
+/* --- PLAYSTATION --- */
+.playStation__main{
+    display: grid;
+    grid-template-areas: "header infoPlay";
+    grid-template-columns: 150px 1fr;
+    @include sizes(100vw, 100vh);
+    @include media-query(md){
+        grid-template-areas: "header"
+                            "infoPlay";
+        grid-template-columns: 100vw;
+        grid-template-rows: 120px auto;
+    }
+}
+.playStation__info{
+    grid-area: infoPlay;
+    background-color: white;
+    margin-top: 100px;
+    margin-right: 150px;
+    display: grid;
+    grid-template-areas: 
+    "tituloP tituloP imgP"
+    "infoP infoP imgP"
+    "infoP infoP btnP"
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px auto auto;
+    align-items: center;
+    justify-content: center;
+    @include media-query(md){
+        grid-template-areas: "tituloP"
+                            "imgP"
+                            "infoP"
+                            "btnP";
+        grid-template-columns: 100vw;
+        grid-template-rows: 100px 200px auto auto;
+        margin: 0;
+        justify-items: center;
+        text-align: center;
+    }
+    &--img{
+        width: 100%;
+        margin: 25px;
+        margin-left: 100px;
+        grid-area: imgP;
+        @include media-query(md){
+            width: 30%;
+            margin: 0;
+        }
+        @include media-query(sm){
+            @include sizes(auto, 100%);
+            margin-left: 0;
+        }
+    }
+    &--titulo{
+        grid-area: tituloP;
+        font-size: 36px;
+        margin-left: 25px;
+    }
+    &--div{
+        grid-area: infoP;
+        margin: 25px;
+    }
+    &--btn{
+        grid-area: btnP;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}
+/* --- PLAYSTATION --- */

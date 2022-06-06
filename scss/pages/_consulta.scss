@@ -1,0 +1,118 @@
+@import "../variables";
+@import "../functions";
+/* --- CONSULTA --- */
+.consulta__main{
+    display: grid;
+    grid-template-areas: "header consulta";
+    grid-template-columns: 150px 1fr;
+    @include sizes (100vw, 100vh);
+    @include media-query(md){
+        grid-template-areas: "header"
+                            "consulta";
+        grid-template-columns: 100vw;
+        grid-template-rows: 120px auto;
+    }
+}
+.consulta__area{
+    grid-area: consulta;
+    background-color: white;
+    margin-top: 100px;
+    margin-right: 150px;
+    padding: 25px;
+    display: grid;
+    grid-template-areas:"tituloConsulta tituloConsulta"
+     "form imgConsulta";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+    @include media-query(md){
+        grid-template-areas: "tituloConsulta"
+        "imgConsulta"
+                            "form"
+                            ;
+        grid-template-columns: 100vw;
+        grid-template-rows: 100px auto auto;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+    }
+    h1{
+        font-size: 36px;
+        grid-area: tituloConsulta;
+        padding: 25px;
+        @include media-query(sm){
+            padding: 0;
+        }
+    }
+    .formulario{
+        grid-area: form;
+        width: 90%;
+        form{
+            display: flex;
+            flex-direction: column;
+            input{
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px;
+                margin-left: 0;
+                box-sizing: border-box;
+                outline: none;
+                transition: 500ms;
+                &:focus{
+                    border: 3px solid #555;
+                }
+            }
+            select {
+                width: 100%;
+                padding: 16px 20px;
+                border: none;
+                border-radius: 4px;
+                background-color: #f1f1f1;
+                margin: 8px;
+                margin-left: 0;
+            }
+            textarea {
+                margin: 8px;
+                margin-left: 0;
+                @include sizes (100%, 150px);
+                padding: 12px 20px;
+                box-sizing: border-box;
+                border: 2px solid #ccc;
+                border-radius: 4px;
+                background-color: #f8f8f8;
+                resize: none;
+                outline: none;
+                transition: 500ms;
+                &:focus{
+                    border: 3px solid #555;
+                }
+            }
+            input[type=submit] {
+                text-align: center;
+                width: 100%;
+                background: none;
+                border: 2px solid $color_secundario;
+                cursor: pointer;
+                margin: 10px;
+                margin-left: 0;
+                font-size: 16px;
+                &:hover{
+                    background-color: $color_secundario;
+                    color: white;
+                }
+            }
+        }
+    }
+    img{
+        grid-area: imgConsulta;
+        width: 100%;
+        @include media-query(md){
+            width: 50%;
+        }
+        @include media-query(sm){
+            width: 100%;
+        }
+    }
+}
+/* --- CONSULTA --- */

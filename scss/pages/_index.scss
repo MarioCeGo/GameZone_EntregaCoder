@@ -1,0 +1,84 @@
+@import "../variables";
+@import "../functions";
+/* --- INDEX --- */
+.index__main{
+    display: grid;
+    grid-template-areas: "header home";
+    grid-template-columns: 150px 1fr;
+    @include sizes (100vw, 100vh);
+    width: 100vw;
+    height: 100vh;
+    @include media-query(md){
+        grid-template-areas: "header"
+                            "home";
+        grid-template-columns: 100vw;
+        grid-template-rows: 120px auto;
+    }
+}
+.index__main--header{
+    grid-area: header;
+}
+.index__main--home{
+    grid-area: home;
+    background-color: white;
+    margin-top: 100px;
+    margin-right: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    @include media-query(md){
+        margin: 0;
+    }
+    @include media-query(sm){
+        grid-template-columns: 100vw;
+        grid-template-rows: repeat(3, 300px);
+        
+    }
+    
+    img{
+        width: 100%;
+        @include media-query(sm){
+            @include sizes (80%, 300px);
+            margin: 0;
+        }
+    }
+    a{
+        @include sizes(100%, 100%);
+        div{
+            @include sizes(100%, 100%);
+            display: grid;
+            align-items: center;
+            transition: 500ms;
+            @include media-query(sm){
+                justify-content: center;
+            }
+        }
+        
+    }
+}
+.index__main--playStation{
+    &:hover{
+        border-bottom: 30px solid $color_playStation;
+        @include media-query(sm){
+            border: none;
+        }
+    }
+}
+.index__main--xbox{
+    &:hover{
+        border-bottom: 30px solid $color_xbox;
+        @include media-query(sm){
+            border: none;
+        }
+    }
+}
+.index__main--nintendo{
+    &:hover{
+        border-bottom: 30px solid $color_nintendo;
+        @include media-query(sm){
+            border: none;
+        }
+    }
+}
+/* --- INDEX --- */
