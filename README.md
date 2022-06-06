@@ -10,3 +10,5 @@ Visual Studio Code, Node JS y GIT
 
 ## Link a la pagina
 [GameZone](https://gamezoneentregacoder.000webhostapp.com/index.html)
+
+[GameZone__GitPages](https://mariocego.github.io/GameZone_EntregaCoder/)
